@@ -1,0 +1,41 @@
+{{#if isSecondary}}
+<ul class="nav" role="menu">
+  {{#foreach navigation}}
+  <li class="nav-{{slug}}" role="menuitem">
+    <a href="{{url}}">
+      <svg class="icon" role="img" aria-label="{{slug}} icon">
+        <title>{{slug}}</title>
+        <use xlink:href="#{{slug}}"></use>
+      </svg>
+    </a>
+  </li>
+  {{/foreach}}
+</ul>
+{{else}}
+<ul class="nav" role="menu">
+  <li role="menuitem">
+    <a href="https://alexlambdas.blog/about/">About</a>
+  </li>
+  <li class="menuCustom" role="menuitem">
+    <a href="https://alexlambdas.blog/programacion/">Programación
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#F1F5F9">
+        <path d="M480-345 240-585l43-43 197 198 197-197 43 43-240 239Z" />
+      </svg>
+    </a>
+    <ul class="subMenuOneColumn">
+      <li>
+        <a href="https://alexlambdas.blog/programacion/nodejs">NodeJs</a>
+      </li>
+      <li>
+        <a href="https://alexlambdas.blog/programacion/javascript">JavaScript</a>
+      </li>
+      <li>
+        <a href="https://alexlambdas.blog/programacion/typescript">TypeScript</a>
+      </li>
+    </ul>
+  </li>
+  <li role="menuitem">
+    <a href="https://alexlambdas.blog/tecnologias/">Tecnologías</a>
+  </li>
+</ul>
+{{/if}}

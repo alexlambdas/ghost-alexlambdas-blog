@@ -1,0 +1,37 @@
+.subMenuOneColumn,
+.subMenuTwoColumns{
+  display: grid;
+  padding: 16px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 1px solid #D6D3D1;
+  background-color: var(--ghost-accent-color);
+  filter: contrast(120%);
+  box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.1);
+  list-style: none;
+  visibility: hidden;
+}
+
+.subMenuOneColumn > li > a,
+.subMenuTwoColumns > li > a{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 32px;
+  border-radius: 3px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.subMenuOneColumn > li > a:hover,
+.subMenuTwoColumns > li > a:hover{
+  background-color: var(--ghost-accent-color);
+  filter: contrast(150%);
+}
+
+.subMenuOneColumn{
+  grid-template-columns: repeat(1,1fr);
+  position: absolute;
+  margin-top: 0px !important;
+}
